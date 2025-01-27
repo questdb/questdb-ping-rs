@@ -22,8 +22,10 @@ pub fn ping_questdb(conf: &str) -> Result<(), String> {
 }
 
 fn main() {
-    let conf = "http::addr=localhost:9000;";
-    match ping_questdb(conf) {
+    let conf = std::env::args()
+        .nth(1)
+        .unwrap_or_else(|| "http::addr=localhost:9000;".to_string());
+    match ping_questdb(&conf) {
         Ok(_) => println!("QuestDB is alive!"),
         Err(e) => eprintln!("Failed to ping QuestDB: {}", e),
     }

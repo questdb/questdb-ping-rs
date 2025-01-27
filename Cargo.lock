@@ -273,6 +273,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a85ae0d477308986d89496bce6227833e11490cd27b98b809e4704b105000fd8"
 
 [[package]]
+name = "questdb-ping-rs"
+version = "0.1.0"
+dependencies = [
+ "questdb-confstr",
+ "ureq",
+]
+
+[[package]]
 name = "quote"
 version = "1.0.38"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -294,14 +302,6 @@ dependencies = [
  "spin",
  "untrusted",
  "windows-sys",
-]
-
-[[package]]
-name = "rust_questdb_ping"
-version = "0.1.0"
-dependencies = [
- "questdb-confstr",
- "ureq",
 ]
 
 [[package]]
