@@ -1,0 +1,9 @@
+[package]
+name = "rust_questdb_ping"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+questdb-confstr = "0.1.0"
+ureq = "=2.9"
+
